@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoldenRetriever (GLDR) — Retrieves Gold (GLD)</title>
+  <meta name="description" content="Golden Retriever (GLDR) retrieves Gold (GLD) to retrieve you. Your best friend that retrieves Gold to retrieve you." />
+  <link rel="icon" href="GLDRlogo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-frame">
+  <div class="metal-grain" aria-hidden="true"></div>
+  <div class="metal-shine" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top">
+      <img class="coin-logo" src="GLDRlogo.png" alt="GoldenRetriever gold coin logo" />
+      <span>
+        <strong>GoldenRetriever</strong>
+        <em>$GLDR</em>
+      </span>
+    </a>
+    <nav class="social-nav">
+      <a class="icon-link" href="https://x.com/gldrcoin" target="_blank" rel="noopener noreferrer" aria-label="GoldenRetriever on X" title="X">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+      </a>
+      <a class="icon-link icon-tg" href="https://t.me/GoldenRetrieverGLDRPortal" target="_blank" rel="noopener noreferrer" aria-label="GoldenRetriever Telegram" title="Telegram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Golden Retriever (GLDR) retrieves Gold (GLD) to retrieve you!</h1>
+      <p class="lede">Your best friend that retrieves Gold to retrieve you.</p>
+
+      <figure class="hero-shot">
+        <img src="GLDR1.jpg" alt="Golden Retriever puppy on Wall Street holding a gold bar, wearing a $GLDR tag" />
+      </figure>
+
+      <div class="trade-row">
+        <a class="btn btn-gold" href="https://app.long.xyz/tokens/0x46bd9f1276234651d9be3ade250203c2094e1e18" target="_blank" rel="noopener noreferrer">
+          LONG.XYZ
+        </a>
+        <a class="btn btn-outline" href="https://dexscreener.com/robinhood/0x46bd9f1276234651d9be3ade250203c2094e1e18" target="_blank" rel="noopener noreferrer">
+          Dexscreener
+        </a>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Token facts">
+      <article class="card">
+        <span class="label">Ticker</span>
+        <strong>$GLDR</strong>
+      </article>
+      <article class="card">
+        <span class="label">Paired with</span>
+        <strong>$GLD</strong>
+      </article>
+      <article class="card">
+        <span class="label">Venue</span>
+        <strong>Robinhood</strong>
+      </article>
+      <article class="card ca-card">
+        <span class="label">Contract</span>
+        <code id="ca">0x46bd9f1276234651d9be3ade250203c2094e1e18</code>
+        <button type="button" class="copy-btn" id="copy-ca">Copy</button>
+      </article>
+    </section>
+  </main>
+
+  <div class="closing">
+    <div class="closing-panel">
+      <section class="bottom-shot">
+        <img src="GLDR2.jpg" alt="Golden Retriever walking Wall Street with a gold bar in front of the NYSE" />
+      </section>
+      <footer>
+        <p class="disclaimer">
+          <strong>Disclaimer.</strong> GoldenRetriever ($GLDR) is a community crypto token. This website is for entertainment and information only and is not financial, investment, legal, or tax advice. Cryptocurrency is highly volatile and you can lose all of the value you put in. Nothing here is an offer to sell or a solicitation to buy securities or any other financial product. Do your own research. Links to LONG.XYZ, Dexscreener, X, and Telegram are third-party services we do not control. GoldenRetriever is not affiliated with Robinhood Markets, Inc., SPDR Gold Shares ($GLD), the NYSE, or any pictured landmark. Memes retrieve vibes — not guaranteed returns.
+        </p>
+        <p class="foot-note">$GLDR · fetches gold · good boy energy</p>
+      </footer>
+    </div>
+  </div>
+
+  </div>
+
+  <script>
+    const btn = document.getElementById("copy-ca");
+    const ca = document.getElementById("ca").textContent.trim();
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(ca);
+        btn.textContent = "Copied";
+        setTimeout(() => { btn.textContent = "Copy"; }, 1600);
+      } catch {
+        btn.textContent = "Select CA";
+      }
+    });
+  </script>
+</body>
+</html>
